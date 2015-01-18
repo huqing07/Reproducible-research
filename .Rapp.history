@@ -1,0 +1,69 @@
+library(httr)
+oauth_endpoints("github")
+myapp <- oauth_app("github", "56b637a5baffac62cad9")
+myapp <- oauth_app("github")
+myapp <- oauth_app("github","de620b2b13b2012a53ad44e1e377cf18c7dbbea0 ")
+?plot
+library(ggplot)
+library(qplot)
+library(ggplot2)
+?grep
+?subset
+?unique
+?xyplot
+library(lattice)
+?xyplot
+?type
+?plot
+?xyplot
+require(stats)#
+#
+## Tonga Trench Earthquakes#
+#
+Depth <- equal.count(quakes$depth, number=8, overlap=.1)#
+xyplot(lat ~ long | Depth, data = quakes)#
+update(trellis.last.object(),#
+       strip = strip.custom(strip.names = TRUE, strip.levels = TRUE),#
+       par.strip.text = list(cex = 0.75),#
+       aspect = "iso")
+xyplot(lat ~ long | Depth, data = quakes)
+update(trellis.last.object(),#
+       strip = strip.custom(strip.names = TRUE, strip.levels = TRUE),#
+       par.strip.text = list(cex = 0.75),#
+       aspect = "iso")
+EE <- equal.count(ethanol$E, number=9, overlap=1/4)
+xyplot(NOx ~ C | EE, data = ethanol,#
+       prepanel = function(x, y) prepanel.loess(x, y, span = 1),#
+       xlab = "Compression Ratio", ylab = "NOx (micrograms/J)",#
+       panel = function(x, y) {#
+           panel.grid(h = -1, v = 2)#
+           panel.xyplot(x, y)#
+           panel.loess(x, y, span=1)#
+       },#
+       aspect = "xy")
+xyplot(Sepal.Length + Sepal.Width ~ Petal.Length + Petal.Width | Species,#
+       data = iris, scales = "free", layout = c(2, 2),#
+       auto.key = list(x = .6, y = .7, corner = c(0, 0)))
+states <- data.frame(state.x77,#
+                     state.name = dimnames(state.x77)[[1]],#
+                     state.region = state.region)
+xyplot(Murder ~ Population | state.region, data = states,#
+       groups = state.name,#
+       panel = function(x, y, subscripts, groups) {#
+           ltext(x = x, y = y, labels = groups[subscripts], cex=1,#
+                 fontfamily = "HersheySans")#
+       })
+xyplot(decrease ~ treatment, OrchardSprays, groups = rowpos,#
+       type = "a",#
+       auto.key =#
+       list(space = "right", points = FALSE, lines = TRUE))
+OrchardSprays
+library(knitr)
+getwd()
+setwed('/Users/qinghu/Desktop')
+setwd('/Users/qinghu/Desktop')
+setwd('/Users/qinghu/Desktop/Reproducible-research')
+opts_knit$set(fig.path = 'figure') # Change the base dir where to save figures#
+knit2html("PA1_template.Rmd", "PA1_template.html")
+opts_knit$set(fig.path = 'figure') # Change the base dir where to save figures#
+knit2html("PA1_template.Rmd", "PA1_template.html")
